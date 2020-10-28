@@ -1,0 +1,137 @@
+[class^="bg-"] {
+    display: flex;
+    flex-wrap: wrap;
+    width: 30%;
+    height: 150px;
+    margin: 0 auto;
+    border: 1px solid red;
+}
+
+/* 
+background-color: Establece el color de fondo de la caja
+background-image:url(ruta) Establece la imagen de fondo de la caja
+background-repeat: Establece si la imagen se repite o no
+    repeat-x|repeat-y|no-repeat
+background-size: Establece el tamaño de la imagen de fondo
+    x [y]|auto|cover|contain. 
+    el valor en y es opcional, si no se lo ponemos lo calcula automáticamente
+    cover cubre la caja por completo, aunque la imagen escape del contenedor
+    contain la imagen se ajusta al contenido
+background-position: Establece la posicion de la imagen, si no se especifica un segundo valor será center
+    left top
+    left center
+    left bottom
+    right top
+    right center
+    right bottom
+    center top
+    center center
+    center bottom
+    x% y%
+    xpos ypos
+    initial
+    inherit
+
+background-clip: Establece que parte de la caja rellenará el fondo
+    Muestra la imagen desde donde le decimos, solo oculta, NO redimensiona
+    border-box|padding-box|content-box
+
+background-origin: Establece donde comienza el fondo
+    Redimensiona la imagen para que ocupe la zona que le decimos
+    border-box|padding-box|content-box
+
+background-attachment: permite establecer si el fondo se coloca respecto a la caja o al viewport
+    scroll|fixed
+*/
+
+body {
+    padding-bottom: 50em;
+    text-align: center;
+}
+
+/* cambiar el color de fondo */
+.bg-color {
+    background-color: purple;
+}
+
+/* coloca una imagen de fondo */
+.bg-image {
+    background-image: url(logo.png);
+}
+
+/* coloca una imagen de fondo con un tamanio definido  contain ajusta la imagen al contenido*/
+.bg-size {
+    background-image: url(logo.png);
+    /* contain no se deforma y ocupa la caja */
+    background-size: contain;
+}
+
+/* define si la imagen de fondo se repite o no */
+.bg-repeat {
+    background-image: url(logo.png);
+    background-size: 40%;
+    background-repeat: no-repeat;
+    /* background-repeat: repeat;
+    background-repeat: repeat-x;
+    background-repeat: repeat-y; */
+}
+
+
+/* defina la posicion de la imagen */
+.bg-position {
+    background-image: url(cafe.jpeg);
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: right 50px ;
+}
+
+
+/*  muetra la imagen desde donde decimos y oculta el resto*/
+.bg-clip {
+    background-clip: border-box;
+    /* background-clip: padding-box;
+    background-clip: content-box; */
+    border: 10px dotted red;
+    background-image: url(cafe.jpeg);
+    /* background-color: blue; */
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 25px;
+}
+
+
+/* es lo mismo que clip pero redimenciona la imagen para que ocupe la zona que le decimos */
+.bg-origin {
+    background-origin: border-box;
+    border: 10px dotted red;
+    padding: 25px;
+    background-image: url(cafe.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* el fondo es relativo al viewport */
+
+.bg-attachment {
+    
+    width: 100%;
+    height: 400px;
+    background-image: url(cafe.jpeg);
+    /* background-repeat: no-repeat; */
+    background-size: contain;
+    background-attachment: fixed;
+}
+
+/* coloca varias imagenes de fondo */
+
+.bg-multiple {
+    
+    margin-top: 100px;
+    background-image:
+    url(logo.png),
+    url(cafe.jpeg);
+    background-size: 30%, cover;
+    background-repeat: no-repeat;
+    background-position: bottom right, center;
+    background-attachment: scroll,fixed;
+} 

@@ -1,0 +1,103 @@
+/*
+
+Structural
+    :root - Representa la raiz del documento (html) usando una pseudoclase tenemos más especificidad que si usáramos html
+
+    :empty - Esta pseudoclase se aplica para los elementos vacios, es decir, etiquetas que no tienen contenido
+    
+    -child
+        :first-child - Selecciona al primer hijo (independientemente del tipo de etiqueta)
+        :last-child - Selecciona al ultimo hijo (independientemente del tipo de etiqueta)
+
+        :nth-child(n) - Selecciona al hijo n(independientemente del tipo de etiqueta)
+        :nth-last-child(n) Selecciona al hijo n empezando a contar desde el último (independientemente del tipo de etiqueta)
+        :only-child Selecciona al hijo unico(independientemente del tipo de etiqueta)
+    
+    -type
+        :first-of-type
+        :last-of-type
+        :nth-of-type()
+        :nth-last-of-type()
+        :only-of-type
+
+    Valores posibles:
+        odd - Impares
+        even - Pares
+        numeros enteros - 2,3,4...
+        equaciones (1n,3n,4n+1,n+4,...)
+            n es un multiplicador va de 0 hasta que se quede sin elementos
+    
+Negation
+    :not() - Selecciona al elemento que no cumpla la condición, se puede poner cualquier selector salvo otro :not
+*/
+
+/* .paragraph {
+  padding: 0.5em;
+  background: lightblue;
+} */
+
+/* selecciona los elementos vacios */
+/* .paragraph:empty {
+  all: unset;
+} */
+
+/* seleciona al priemer hijo */
+/* .paragraph:first-child {
+    background: red;
+} */
+
+/* seleciona al ultimo hijo */
+/* .paragraph:last-child {
+    background: blue;
+}  */
+
+/* selecciona los elementos inpares */
+/* .paragraph:nth-child(odd) {
+    background: lightcoral;
+} */
+
+/* se aplica a los elementos pares */
+/* .paragraph:nth-child(even) {
+    background: lightcoral;
+} */
+
+/* aplica al elemento puesto etre parantesis */
+/* .paragraph:nth-child(3) {
+    background: lightcoral;
+} */
+
+
+/* seleciona los n valores */
+/* .paragraph:nth-child(3n) {
+    background: lightcoral;
+}  */
+
+/* .paragraph:nth-child(3n + 1) {
+    background: lightcoral;
+} */
+
+/* .paragraph:nth-child(n + 4) {
+    background: lightcoral;
+} */
+
+
+/* .paragraph:nth-last-child(n+3) {
+    background: lightcoral;
+} */
+
+/* selecciona al hijo unico */
+/* .paragraph:only-child{
+    background: lightseagreen;
+} */
+
+/* selecciona los primeros hijos segun la etiqueta */
+/* 
+.paragraph:first-of-type{
+    background: red;
+} */
+
+/* seleciona al elemento que no cumpla la condicion */
+/* 
+.paragraph:not(.first) {
+    background: green;
+} */

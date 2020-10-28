@@ -1,0 +1,25 @@
+/* root absede al rot */
+:root {
+    --color: blue;
+    --border: 3px solid yellow;
+
+}
+
+.paragraph {
+    color: var(--color)
+}
+
+.article{
+    --color:green;
+}
+
+.check:checked + .box{
+    --color: purple;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    background: var(--color);
+    border: var(--border)
+}

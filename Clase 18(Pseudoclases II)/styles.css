@@ -1,0 +1,82 @@
+.input,
+.label {
+    display: block;
+}
+
+/*
+UI States
+    :enabled
+    :disabled
+    :checked
+    :in-range
+    :out-of-range
+    :required
+    :optional
+    :valid
+    :invalid
+    :read-only
+    :read-write
+*/
+
+/* enable */
+.input:enabled {
+    background: red;
+}
+/* diseable se aplica a todos los input que esten desactivados*/
+.input:disabled {
+    background: yellow;
+    border: none;
+}
+
+/* checked se aplica si es elemento esta checkeado */
+.input:checked + label{
+    font-size: 2em;
+}
+
+/* in-range se aplica mientras el valor del input este dontro del rango*/
+.input:in-range{
+    background: green;
+}
+
+
+.input:out-of-range{
+    background: blue;
+}
+
+/* se aplica cuando los input son obcionales */
+.input:optional{
+    background: blue;
+}
+
+.input:required{
+    background: lightcoral;
+}
+
+/* se aplica si la entrada es valida */
+.input:valid{
+    background: green;
+}
+
+/* se aplica si la entrada es invalida */
+.input:invalid{
+    background: red;
+}
+
+/*
+Structural
+    :root
+    :nth-child()
+    :nth-last-child()
+    :nth-of-type()
+    :nth-last-of-type()
+    :first-child
+    :last-child
+    :first-of-type
+    :last-of-type
+    :only-child
+    :only-of-type
+    :empty
+
+Negation
+    :not()
+*/
